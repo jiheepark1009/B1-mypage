@@ -1,0 +1,18 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="thumbMarketingTitle">
+  <title id="thumbMarketingTitle">스포츠 마케팅 캠페인 성과를 나타내는 도넛 차트와 막대 그래프 일러스트</title>
+  <rect width="400" height="240" fill="#f4f6fb"/>
+
+  <g transform="translate(96,120)">
+    <circle r="70" fill="none" stroke="#e3e7f0" stroke-width="20"/>
+    <circle r="70" fill="none" stroke="#13294b" stroke-width="20" stroke-dasharray="330 440" stroke-linecap="round" transform="rotate(-90)"/>
+    <circle r="70" fill="none" stroke="#d8a13a" stroke-width="20" stroke-dasharray="120 440" stroke-dashoffset="-330" stroke-linecap="round" transform="rotate(-90)"/>
+    <text text-anchor="middle" dy="8" font-family="'Inter',sans-serif" font-size="26" font-weight="700" fill="#13294b">+34%</text>
+  </g>
+
+  <g transform="translate(230,60)">
+    <rect x="0" y="90" width="26" height="60" rx="4" fill="#13294b"/>
+    <rect x="36" y="60" width="26" height="90" rx="4" fill="#d8a13a"/>
+    <rect x="72" y="30" width="26" height="120" rx="4" fill="#13294b" opacity="0.75"/>
+    <rect x="108" y="70" width="26" height="80" rx="4" fill="#13294b" opacity="0.4"/>
+  </g>
+</svg>

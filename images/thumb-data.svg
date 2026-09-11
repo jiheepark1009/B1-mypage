@@ -1,0 +1,20 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="thumbDataTitle">
+  <title id="thumbDataTitle">경기 데이터 예측 모델의 추세선과 산점도를 나타내는 그래프 일러스트</title>
+  <rect width="400" height="240" fill="#f4f6fb"/>
+
+  <g stroke="#e3e7f0" stroke-width="1">
+    <line x1="40" y1="30" x2="40" y2="200"/>
+    <line x1="40" y1="200" x2="370" y2="200"/>
+  </g>
+
+  <polyline points="40,170 90,150 140,160 190,110 240,120 290,70 340,50" fill="none" stroke="#13294b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="40,190 90,180 140,150 190,155 240,100 290,110 340,60" fill="none" stroke="#d8a13a" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g fill="#13294b">
+    <circle cx="90" cy="150" r="5"/>
+    <circle cx="190" cy="110" r="5"/>
+    <circle cx="290" cy="70" r="5"/>
+  </g>
+
+  <text x="200" y="222" text-anchor="middle" font-family="'Inter',sans-serif" font-size="14" fill="#5d6b82">예측 vs 실제 득점 추이</text>
+</svg>
