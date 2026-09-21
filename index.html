@@ -1,212 +1,333 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>박지희 | Sports Data Analyst Portfolio</title>
-  <meta name="description" content="스포츠 마케팅과 경기 데이터를 분석하는 데이터 분석가 박지희의 포트폴리오입니다.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박지희 | Sports Data Analyst Portfolio</title>
+    <meta
+      name="description"
+      content="스포츠 마케팅과 경기 데이터를 분석하는 데이터 분석가 박지희의 포트폴리오입니다."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
-  <script>
-    (() => {
-      const saved = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = saved || (prefersDark ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
-</head>
-<body>
+    <script>
+      (() => {
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const theme = saved || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#hero" class="nav__logo">JIHEE<span>.</span></a>
 
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#hero" class="nav__logo">JIHEE<span>.</span></a>
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
 
-      <ul class="nav__menu" id="navMenu">
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#skills" class="nav__link">Skills</a></li>
-        <li><a href="#projects" class="nav__link">Projects</a></li>
-        <li><a href="#contact" class="nav__link">Contact</a></li>
-      </ul>
+        <div class="nav__actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="다크 모드 전환"
+            aria-pressed="false"
+          >
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+          <button
+            class="nav__toggle"
+            id="navToggle"
+            aria-label="메뉴 열기"
+            aria-expanded="false"
+            aria-controls="navMenu"
+          >
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-      <div class="nav__actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환" aria-pressed="false">
-          <i class="fa-solid fa-moon" aria-hidden="true"></i>
-        </button>
-        <button class="nav__toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navMenu">
-          <span class="nav__toggle-bar"></span>
-          <span class="nav__toggle-bar"></span>
-          <span class="nav__toggle-bar"></span>
-        </button>
-      </div>
-    </nav>
-  </header>
+    <main>
+      <section id="hero" class="hero">
+        <div class="container hero__inner">
+          <div class="hero__text reveal">
+            <p class="eyebrow">Sports Data Analyst</p>
+            <h1 class="hero__title">
+              데이터로
+              <span class="highlight"
+                >스포츠의 <br />
+                다음 장면</span
+              >을 읽습니다
+            </h1>
+            <p class="hero__desc">
+              경기 기록과 팬 데이터 속 흐름을 찾아 의사결정에 도움이 되는
+              인사이트로 옮기는 주니어 데이터 분석가, 박지희입니다.
+            </p>
 
-  <main>
+            <div class="hero__cta">
+              <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
+              <a href="#contact" class="btn btn--outline">연락하기</a>
+            </div>
 
-    <section id="hero" class="hero">
-      <div class="container hero__inner">
-        <div class="hero__text reveal">
-          <p class="eyebrow">Sports Data Analyst</p>
-          <h1 class="hero__title">데이터로 <span class="highlight">스포츠의 다음 장면</span>을 읽습니다</h1>
-          <p class="hero__desc">경기 기록과 팬 데이터 속 흐름을 찾아 의사결정에 도움이 되는 인사이트로 옮기는 주니어 데이터 분석가, 박지희입니다.</p>
-
-          <div class="hero__cta">
-            <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
-            <a href="#contact" class="btn btn--outline">연락하기</a>
+            <dl class="hero__stats">
+              <div class="stat">
+                <dt class="stat__value" data-count-to="6">0</dt>
+                <dd class="stat__label">분석 프로젝트</dd>
+              </div>
+              <div class="stat">
+                <dt class="stat__value" data-count-to="82" data-suffix="%">
+                  0
+                </dt>
+                <dd class="stat__label">평균 예측 정확도</dd>
+              </div>
+              <div class="stat">
+                <dt class="stat__value" data-count-to="3">0</dt>
+                <dd class="stat__label">분석 스포츠 리그</dd>
+              </div>
+            </dl>
           </div>
 
-          <dl class="hero__stats">
-            <div class="stat">
-              <dt class="stat__value" data-count-to="6">0</dt>
-              <dd class="stat__label">분석 프로젝트</dd>
+          <div class="hero__media reveal">
+            <img
+              src="images/hero-graphic.svg"
+              alt="경기 데이터를 시각화한 그래프와 스포츠 아이콘 일러스트"
+              class="hero__img"
+              width="520"
+              height="420"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about section">
+        <div class="container about__inner">
+          <div class="about__media reveal">
+            <img
+              src="images/profile.svg"
+              alt="박지희 프로필 일러스트"
+              class="about__img"
+              width="400"
+              height="400"
+            />
+          </div>
+
+          <div class="about__content reveal">
+            <p class="eyebrow">About Me</p>
+            <h2 class="section__title">
+              숫자 너머의 이야기를 찾는 데이터 분석가
+            </h2>
+            <p>
+              축구와 야구를 좋아하다 보니, 경기 기록 한 줄에도 선수의 컨디션과
+              팀의 전략이 담겨 있다는 걸 알게 됐습니다. 이 관심은 자연스럽게
+              &ldquo;그 데이터를 어떻게 분석하고, 어떻게 의사결정에 쓰이게
+              만들까&rdquo;라는 질문으로 이어졌습니다.
+            </p>
+            <p>
+              현재는 스포츠 경기 데이터 분석과 스포츠 마케팅 데이터 분석, 두
+              축을 중심으로 프로젝트를 진행하며 데이터 분석가로서의 실무 역량을
+              쌓고 있습니다. 숫자를 예쁘게 그리는 것보다, 그 숫자가 전달하는
+              &ldquo;다음 행동&rdquo;을 제안하는 분석을 지향합니다.
+            </p>
+
+            <ul class="about__list">
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                축구(EPL·K리그)·야구(KBO) 경기 데이터 분석 경험
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i> 마케팅
+                캠페인 성과 데이터 기반 전략 제안 경험
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Python·SQL
+                기반 데이터 수집·전처리 파이프라인 구축
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills section">
+        <div class="container">
+          <p class="eyebrow">Skills</p>
+          <h2 class="section__title">사용하는 도구와 강점</h2>
+          <p class="section__desc">
+            분석부터 시각화, 도메인 이해까지 &mdash; 스포츠 데이터를 다루기 위해
+            쌓아온 역량입니다.
+          </p>
+
+          <div class="skills__grid reveal" id="skillsGrid"></div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects section">
+        <div class="container">
+          <p class="eyebrow">Projects</p>
+          <h2 class="section__title">대표 프로젝트</h2>
+          <p class="section__desc">
+            스포츠 마케팅과 경기 데이터 분석, 두 분야로 진행한 예시
+            프로젝트입니다.
+            <em>추후 실제 프로젝트 내용으로 교체될 예정입니다.</em>
+          </p>
+
+          <div class="filter" role="group" aria-label="프로젝트 카테고리 필터">
+            <button
+              class="filter__btn is-active"
+              data-filter="all"
+              type="button"
+            >
+              전체
+            </button>
+            <button class="filter__btn" data-filter="marketing" type="button">
+              스포츠 마케팅
+            </button>
+            <button class="filter__btn" data-filter="data" type="button">
+              경기 데이터
+            </button>
+          </div>
+
+          <div class="projects__grid reveal" id="featuredGrid"></div>
+
+          <div class="projects__divider reveal">
+            <h3>GitHub Repositories</h3>
+            <p>GitHub API로 실시간으로 불러온 저장소 목록입니다.</p>
+          </div>
+
+          <div class="repo__status" id="repoStatus" aria-live="polite"></div>
+          <div class="repo__grid reveal" id="repoGrid"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <div class="container contact__inner">
+          <div class="contact__info reveal">
+            <p class="eyebrow">Contact</p>
+            <h2 class="section__title">함께 이야기 나눠요</h2>
+            <p>
+              협업이나 채용 관련 문의는 아래 폼이나 이메일로 편하게 연락 주세요.
+              빠르게 답변드리겠습니다.
+            </p>
+
+            <ul class="contact__list">
+              <li>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:jiheepark1009@gmail.com"
+                  >jiheepark1009@gmail.com</a
+                >
+              </li>
+              <li>
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <a
+                  href="https://github.com/jiheepark1009"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/jiheepark1009</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact__form reveal" id="contactForm" novalidate>
+            <div class="form__group">
+              <label for="name">이름</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="홍길동"
+                autocomplete="name"
+              />
+              <span class="form__error" id="nameError"></span>
             </div>
-            <div class="stat">
-              <dt class="stat__value" data-count-to="82" data-suffix="%">0</dt>
-              <dd class="stat__label">평균 예측 정확도</dd>
+
+            <div class="form__group">
+              <label for="email">이메일</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+                autocomplete="email"
+              />
+              <span class="form__error" id="emailError"></span>
             </div>
-            <div class="stat">
-              <dt class="stat__value" data-count-to="3">0</dt>
-              <dd class="stat__label">분석 스포츠 리그</dd>
+
+            <div class="form__group">
+              <label for="message">메시지</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="문의 내용을 입력해주세요"
+              ></textarea>
+              <span class="form__error" id="messageError"></span>
             </div>
-          </dl>
+
+            <button type="submit" class="btn btn--primary btn--block">
+              보내기
+            </button>
+            <p class="form__success" id="formSuccess" role="status"></p>
+          </form>
         </div>
+      </section>
+    </main>
 
-        <div class="hero__media reveal">
-          <img src="images/hero-graphic.svg" alt="경기 데이터를 시각화한 그래프와 스포츠 아이콘 일러스트" class="hero__img" width="520" height="420">
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="about section">
-      <div class="container about__inner">
-        <div class="about__media reveal">
-          <img src="images/profile.svg" alt="박지희 프로필 일러스트" class="about__img" width="400" height="400">
-        </div>
-
-        <div class="about__content reveal">
-          <p class="eyebrow">About Me</p>
-          <h2 class="section__title">숫자 너머의 이야기를 찾는 데이터 분석가</h2>
-          <p>축구와 야구를 좋아하다 보니, 경기 기록 한 줄에도 선수의 컨디션과 팀의 전략이 담겨 있다는 걸 알게 됐습니다. 이 관심은 자연스럽게 &ldquo;그 데이터를 어떻게 분석하고, 어떻게 의사결정에 쓰이게 만들까&rdquo;라는 질문으로 이어졌습니다.</p>
-          <p>현재는 스포츠 경기 데이터 분석과 스포츠 마케팅 데이터 분석, 두 축을 중심으로 프로젝트를 진행하며 데이터 분석가로서의 실무 역량을 쌓고 있습니다. 숫자를 예쁘게 그리는 것보다, 그 숫자가 전달하는 &ldquo;다음 행동&rdquo;을 제안하는 분석을 지향합니다.</p>
-
-          <ul class="about__list">
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i> 축구(EPL·K리그)·야구(KBO) 경기 데이터 분석 경험</li>
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i> 마케팅 캠페인 성과 데이터 기반 전략 제안 경험</li>
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Python·SQL 기반 데이터 수집·전처리 파이프라인 구축</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="skills section">
-      <div class="container">
-        <p class="eyebrow">Skills</p>
-        <h2 class="section__title">사용하는 도구와 강점</h2>
-        <p class="section__desc">분석부터 시각화, 도메인 이해까지 &mdash; 스포츠 데이터를 다루기 위해 쌓아온 역량입니다.</p>
-
-        <div class="skills__grid reveal" id="skillsGrid"></div>
-      </div>
-    </section>
-
-    <section id="projects" class="projects section">
-      <div class="container">
-        <p class="eyebrow">Projects</p>
-        <h2 class="section__title">대표 프로젝트</h2>
-        <p class="section__desc">스포츠 마케팅과 경기 데이터 분석, 두 분야로 진행한 예시 프로젝트입니다. <em>추후 실제 프로젝트 내용으로 교체될 예정입니다.</em></p>
-
-        <div class="filter" role="group" aria-label="프로젝트 카테고리 필터">
-          <button class="filter__btn is-active" data-filter="all" type="button">전체</button>
-          <button class="filter__btn" data-filter="marketing" type="button">스포츠 마케팅</button>
-          <button class="filter__btn" data-filter="data" type="button">경기 데이터</button>
-        </div>
-
-        <div class="projects__grid reveal" id="featuredGrid"></div>
-
-        <div class="projects__divider reveal">
-          <h3>GitHub Repositories</h3>
-          <p>GitHub API로 실시간으로 불러온 저장소 목록입니다.</p>
-        </div>
-
-        <div class="repo__status" id="repoStatus" aria-live="polite"></div>
-        <div class="repo__grid reveal" id="repoGrid"></div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact section">
-      <div class="container contact__inner">
-        <div class="contact__info reveal">
-          <p class="eyebrow">Contact</p>
-          <h2 class="section__title">함께 이야기 나눠요</h2>
-          <p>협업이나 채용 관련 문의는 아래 폼이나 이메일로 편하게 연락 주세요. 빠르게 답변드리겠습니다.</p>
-
-          <ul class="contact__list">
-            <li>
-              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-              <a href="mailto:jiheepark1009@gmail.com">jiheepark1009@gmail.com</a>
-            </li>
-            <li>
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__copy">
+          &copy; <span id="year"></span> 박지희. All rights reserved.
+        </p>
+        <ul class="footer__social">
+          <li>
+            <a
+              href="https://github.com/jiheepark1009"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub 프로필로 이동"
+            >
               <i class="fa-brands fa-github" aria-hidden="true"></i>
-              <a href="https://github.com/jiheepark1009" target="_blank" rel="noopener noreferrer">github.com/jiheepark1009</a>
-            </li>
-          </ul>
-        </div>
-
-        <form class="contact__form reveal" id="contactForm" novalidate>
-          <div class="form__group">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" placeholder="홍길동" autocomplete="name">
-            <span class="form__error" id="nameError"></span>
-          </div>
-
-          <div class="form__group">
-            <label for="email">이메일</label>
-            <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email">
-            <span class="form__error" id="emailError"></span>
-          </div>
-
-          <div class="form__group">
-            <label for="message">메시지</label>
-            <textarea id="message" name="message" rows="5" placeholder="문의 내용을 입력해주세요"></textarea>
-            <span class="form__error" id="messageError"></span>
-          </div>
-
-          <button type="submit" class="btn btn--primary btn--block">보내기</button>
-          <p class="form__success" id="formSuccess" role="status"></p>
-        </form>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:jiheepark1009@gmail.com" aria-label="이메일 보내기">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
       </div>
-    </section>
+    </footer>
 
-  </main>
+    <button
+      class="scroll-top"
+      id="scrollTopBtn"
+      aria-label="맨 위로 이동"
+      type="button"
+    >
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p class="footer__copy">&copy; <span id="year"></span> 박지희. All rights reserved.</p>
-      <ul class="footer__social">
-        <li>
-          <a href="https://github.com/jiheepark1009" target="_blank" rel="noopener noreferrer" aria-label="GitHub 프로필로 이동">
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:jiheepark1009@gmail.com" aria-label="이메일 보내기">
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-
-  <button class="scroll-top" id="scrollTopBtn" aria-label="맨 위로 이동" type="button">
-    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-  </button>
-
-  <script src="js/main.js" defer></script>
-</body>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>
